@@ -39,7 +39,7 @@ export const Home = () => {
             <Image source={post.picture} style={{width: '100%'}} />
           </View>
         )}
-        style={{marginTop: 10}}
+        style={{marginTop: 0}}
         ItemSeparatorComponent={() => (
           <View style={{width: scale(SPACING[8])}} />
         )}

@@ -6,8 +6,8 @@ export const styles = StyleSheet.create({
   separator: {
     borderWidth: scale(0.5),
     width: '100%',
-    height: scale(0.5),
-    margin: 0,
+    height: scale(1),
+    marginTop: scale(SPACING[10]),
     borderTopColor: '#D2D4D5',
     borderBottomColor: 'transparent',
     borderRightColor: 'transparent',
