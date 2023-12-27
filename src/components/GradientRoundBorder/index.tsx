@@ -10,7 +10,7 @@ export const GradientRoundBorder = ({children}: any) => {
         style={styles.gradient}
         start={{x: 0, y: 0}} // Punto de inicio del gradiente
         end={{x: 1, y: 0}} // Punto de fin del gradiente
-      >
+        useAngle>
         <View style={styles.innerContainer}>{children}</View>
       </LinearGradient>
     </View>

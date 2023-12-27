@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {createStackNavigator} from '@react-navigation/stack';
-import {Home} from '../screens/Home';
+import {BottomTabNavigation} from './BottomTab';
 
 const NavigationStack = createStackNavigator();
 
@@ -8,7 +8,7 @@ export const Navigation = () => {
   return (
     <NavigationStack.Navigator
       id="Navigation"
-      initialRouteName="Home"
+      initialRouteName="BottomTabNavigation"
       screenOptions={{
         headerStyle: {
           elevation: 0,
@@ -19,7 +19,10 @@ export const Navigation = () => {
           backgroundColor: 'white',
         },
       }}>
-      <NavigationStack.Screen name="Home" component={Home} />
+      <NavigationStack.Screen
+        name="BottomTabNavigation"
+        component={BottomTabNavigation}
+      />
     </NavigationStack.Navigator>
   );
 };
