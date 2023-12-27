@@ -2,7 +2,7 @@
 import {Image, View} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import {COLORS, SPACING} from '../theme';
-import {styles} from '../screens/Home/styles';
+import {styles} from '../components/modules/HeaderAndStories/styles';
 import {Icon} from '../components/Icon';
 import {GradientRoundBorder} from '../components/GradientRoundBorder';
 
@@ -63,7 +63,7 @@ export const renderStoryMapper = (item: any) => {
       <View style={{...styles.dmContainer, marginVertical: scale(0)}}>
         <Image
           source={item.profileImage}
-          style={{width: 80, height: 80, borderRadius: 100}}
+          style={{width: 86, height: 86, borderRadius: 100}}
         />
         <View
           style={{

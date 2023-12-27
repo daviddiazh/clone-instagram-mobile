@@ -1,60 +1,49 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react';
-import {Image, View, Text, FlatList} from 'react-native';
+import {Image, View, Text, FlatList, ScrollView} from 'react-native';
 import {scale} from 'react-native-size-matters';
-import {styles} from './styles';
-import {Icon} from '../../components/Icon';
-import {feedHistories} from '../../api';
-import {renderStoryMapper} from '../../utils/feedStoriesMapper';
+import {HeaderAndStories} from '../../components/modules/HeaderAndStories';
+import {feed, users} from '../../api';
 import {SPACING} from '../../theme';
+import { styles } from './styles';
 
 export const Home = () => {
-  const InstagramLogoLetters = '../../assets/images/Instagram_logo.png';
-  const dmIcon = '../../assets/icons/dm.png';
-
   return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View style={styles.logoContainer}>
-          <Image
-            source={require(InstagramLogoLetters)}
-            style={{width: 150, height: 50}}
-          />
-          <Icon name="chevron-down" size={18} />
-        </View>
-
-        <View style={{...styles.logoContainer, gap: scale(10)}}>
-          <Icon name="heart-04" />
-          <View>
-            <View style={styles.dmContainer}>
-              <Image source={require(dmIcon)} style={{width: 32, height: 32}} />
-              <View style={styles.dmContainerText}>
-                <Text style={styles.dmText}>13</Text>
-              </View>
-            </View>
-          </View>
-        </View>
-      </View>
+    <ScrollView
+      contentInsetAdjustmentBehavior="automatic"
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}>
+      <HeaderAndStories />
 
       <FlatList
-        horizontal
+        horizontal={false}
         keyExtractor={(_, index) => `feed_${index}`}
-        data={feedHistories}
+        data={feed}
         showsHorizontalScrollIndicator={false}
-        renderItem={({item, index}) => (
-          <View key={`${item.id}-${index}`}>
-            {renderStoryMapper(item)}
-            <Text style={styles.usernameText}>
-              {item.id === 0 ? 'Your story' : item.username}
-            </Text>
+        renderItem={({item: post, index}) => (
+          <View key={`${post.id}-${index}`}>
+            <View style={styles.separator} />
+            <View style={styles.userInfoContainer}>
+              <Image
+                source={
+                  users.find(user => user.id === post.userId)?.profileImage
+                }
+                style={styles.picture}
+              />
+              <Text style={{}}>
+                {users.find(user => user.id === post.userId)?.username}
+              </Text>
+            </View>
+
+            <Image source={post.picture} style={{width: '100%'}} />
           </View>
         )}
-        style={styles.feedHistoriesContainer}
+        style={{marginTop: 10}}
         ItemSeparatorComponent={() => (
           <View style={{width: scale(SPACING[8])}} />
         )}
       />
-    </View>
+    </ScrollView>
   );
 };
