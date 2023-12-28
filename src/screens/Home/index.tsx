@@ -17,7 +17,16 @@ import {styles} from './styles';
 import {Icon} from '../../components/Icon';
 
 export const Home = () => {
-  const [likes, setLikes] = useState([false, false, false, false, false]);
+  const [likes, setLikes] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   const [lastPress, setLastPress] = useState<any>(null);
 
   const changeLike = (index: number) => {
@@ -72,7 +81,12 @@ export const Home = () => {
                   }
                   style={styles.picture}
                 />
-                <Text style={{}}>
+                <Text
+                  style={{
+                    ...styles.likesText,
+                    paddingVertical: 0,
+                    fontSize: scale(SPACING[12]),
+                  }}>
                   {users.find(user => user.id === post.userId)?.username}
                 </Text>
               </View>

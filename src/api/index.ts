@@ -87,4 +87,34 @@ export const feed = [
       'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 15 minutos',
   },
+  {
+    id: 5,
+    userId: 3,
+    picture: require('../assets/images/posts/messi2.jpeg'),
+    likes: '30.466 Me gusta',
+    comments: 2300,
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    ago: 'Hace 33 minutos',
+  },
+  {
+    id: 6,
+    userId: 1,
+    picture: require('../assets/images/posts/ronaldinho2.jpeg'),
+    likes: '125.822 Me gusta',
+    comments: 3502,
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    ago: 'Hace 40 minutos',
+  },
+  {
+    id: 7,
+    userId: 2,
+    picture: require('../assets/images/posts/cristiano2.jpeg'),
+    likes: '120.346 Me gusta',
+    comments: 2847,
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    ago: 'Hace 55 minutos',
+  },
 ];

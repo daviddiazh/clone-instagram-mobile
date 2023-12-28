@@ -20,8 +20,8 @@ export const styles = StyleSheet.create({
   },
   picture: {
     borderRadius: 100,
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
   },
   interactionsFatherContainer: {
     flexDirection: 'row',
