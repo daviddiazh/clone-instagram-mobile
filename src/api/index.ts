@@ -5,6 +5,9 @@ export const users = [
     profileImage: require('../assets/images/profilePicture/profile_linkedin.jpeg'),
     closeFriends: false,
     seenHistories: false,
+    followers: '1.205',
+    following: 109,
+    description: '',
   },
   {
     id: 1,
@@ -12,6 +15,9 @@ export const users = [
     profileImage: require('../assets/images/profilePicture/ronaldinho.jpeg'),
     closeFriends: true,
     seenHistories: false,
+    followers: '74,9M',
+    following: 109,
+    description: '',
   },
   {
     id: 2,
@@ -19,6 +25,9 @@ export const users = [
     profileImage: require('../assets/images/profilePicture/cristiano.jpeg'),
     closeFriends: false,
     seenHistories: false,
+    followers: '616M',
+    following: 109,
+    description: '',
   },
   {
     id: 3,
@@ -26,6 +35,9 @@ export const users = [
     profileImage: require('../assets/images/profilePicture/leomessi.jpeg'),
     closeFriends: false,
     seenHistories: false,
+    followers: '496M',
+    following: 109,
+    description: '',
   },
   {
     id: 4,
@@ -33,6 +45,9 @@ export const users = [
     profileImage: require('../assets/images/profilePicture/andreapirlo21.jpeg'),
     closeFriends: false,
     seenHistories: true,
+    followers: '10M',
+    following: 109,
+    description: '',
   },
 ];
 

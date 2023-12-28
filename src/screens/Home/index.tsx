@@ -38,7 +38,7 @@ export const Home = () => {
   };
 
   const doublePress = (id: number) => {
-    var delta = new Date().getTime() - lastPress;
+    const delta = new Date().getTime() - lastPress;
 
     const newLikes = [...likes];
 
@@ -107,7 +107,14 @@ export const Home = () => {
               <View style={styles.interactionsFatherContainer}>
                 <View style={styles.interactionsContainer}>
                   {likes[index] ? (
-                    <Text onPress={() => changeLike(post.id)}>Liked</Text>
+                    <TouchableOpacity onPress={() => changeLike(post.id)}>
+                      <View>
+                        <Image
+                          source={require('../../assets/icons/red-like.png')}
+                          style={{width: 19, height: 16}}
+                        />
+                      </View>
+                    </TouchableOpacity>
                   ) : (
                     <TouchableOpacity onPress={() => changeLike(post.id)}>
                       <View>
