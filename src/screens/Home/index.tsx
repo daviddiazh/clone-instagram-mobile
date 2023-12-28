@@ -1,7 +1,14 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
-import React from 'react';
-import {Image, View, Text, FlatList, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {
+  Image,
+  View,
+  Text,
+  FlatList,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import {HeaderAndStories} from '../../components/modules/HeaderAndStories';
 import {feed, users} from '../../api';
@@ -10,6 +17,16 @@ import {styles} from './styles';
 import {Icon} from '../../components/Icon';
 
 export const Home = () => {
+  const [like, setLike] = useState([false, false, false, false, false]);
+
+  const changeLike = (index: number) => {
+    setLike((prevLikes) => {
+      const newLikes = [...prevLikes];
+      newLikes[index] = !prevLikes[index];
+      return newLikes;
+    });
+  };
+
   return (
     <ScrollView
       contentInsetAdjustmentBehavior="automatic"
@@ -58,10 +75,18 @@ export const Home = () => {
             <View style={{margin: scale(SPACING[10])}}>
               <View style={styles.interactionsFatherContainer}>
                 <View style={styles.interactionsContainer}>
-                  <Image
-                    source={require('../../assets/icons/like.png')}
-                    style={{width: 19, height: 16}}
-                  />
+                  {like[index] ? (
+                    <Text onPress={() => changeLike(post.id)}>Liked</Text>
+                  ) : (
+                    <TouchableOpacity onPress={() => changeLike(post.id)}>
+                      <View>
+                        <Image
+                          source={require('../../assets/icons/like.png')}
+                          style={{width: 19, height: 16}}
+                        />
+                      </View>
+                    </TouchableOpacity>
+                  )}
                   <Image
                     source={require('../../assets/icons/comment.png')}
                     style={{width: 19, height: 18}}
