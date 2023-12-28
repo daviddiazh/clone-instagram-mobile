@@ -6,7 +6,7 @@ import {scale} from 'react-native-size-matters';
 import {HeaderAndStories} from '../../components/modules/HeaderAndStories';
 import {feed, users} from '../../api';
 import {SPACING} from '../../theme';
-import { styles } from './styles';
+import {styles} from './styles';
 
 export const Home = () => {
   return (
