@@ -17,14 +17,27 @@ import {styles} from './styles';
 import {Icon} from '../../components/Icon';
 
 export const Home = () => {
-  const [like, setLike] = useState([false, false, false, false, false]);
+  const [likes, setLikes] = useState([false, false, false, false, false]);
+  const [lastPress, setLastPress] = useState<any>(null);
 
   const changeLike = (index: number) => {
-    setLike((prevLikes) => {
+    setLikes((prevLikes: boolean[]) => {
       const newLikes = [...prevLikes];
       newLikes[index] = !prevLikes[index];
       return newLikes;
     });
+  };
+
+  const doublePress = (id: number) => {
+    var delta = new Date().getTime() - lastPress;
+
+    const newLikes = [...likes];
+
+    if (delta < 250 && !newLikes[id]) {
+      changeLike(id);
+    }
+
+    setLastPress(new Date().getTime());
   };
 
   return (
@@ -66,16 +79,20 @@ export const Home = () => {
               <Icon name="dots-02" size={15} />
             </View>
 
-            <Image
-              source={post.picture}
-              style={{width: '100%', height: scale(400)}}
-              resizeMethod="resize"
-            />
+            <TouchableOpacity
+              onPress={() => doublePress(index)}
+              activeOpacity={1}>
+              <Image
+                source={post.picture}
+                style={{width: '100%', height: scale(400)}}
+                resizeMethod="resize"
+              />
+            </TouchableOpacity>
 
             <View style={{margin: scale(SPACING[10])}}>
               <View style={styles.interactionsFatherContainer}>
                 <View style={styles.interactionsContainer}>
-                  {like[index] ? (
+                  {likes[index] ? (
                     <Text onPress={() => changeLike(post.id)}>Liked</Text>
                   ) : (
                     <TouchableOpacity onPress={() => changeLike(post.id)}>
