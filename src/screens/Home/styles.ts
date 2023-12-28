@@ -15,10 +15,8 @@ export const styles = StyleSheet.create({
   },
   userInfoContainer: {
     flexDirection: 'row',
-    gap: scale(SPACING[10]),
+    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: scale(SPACING[4] + 2),
-    paddingLeft: scale(SPACING[8]),
   },
   picture: {
     borderRadius: 100,

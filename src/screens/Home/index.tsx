@@ -7,6 +7,7 @@ import {HeaderAndStories} from '../../components/modules/HeaderAndStories';
 import {feed, users} from '../../api';
 import {SPACING} from '../../theme';
 import {styles} from './styles';
+import {Icon} from '../../components/Icon';
 
 export const Home = () => {
   return (
@@ -24,40 +25,56 @@ export const Home = () => {
         renderItem={({item: post, index}) => (
           <View key={`${post.id}-${index}`}>
             <View style={styles.separator} />
-            <View style={styles.userInfoContainer}>
-              <Image
-                source={
-                  users.find(user => user.id === post.userId)?.profileImage
-                }
-                style={styles.picture}
-              />
-              <Text style={{}}>
-                {users.find(user => user.id === post.userId)?.username}
-              </Text>
+            <View
+              style={{
+                ...styles.userInfoContainer,
+                paddingHorizontal: scale(SPACING[8]),
+              }}>
+              <View
+                style={{
+                  ...styles.userInfoContainer,
+                  gap: scale(SPACING[10]),
+                  paddingVertical: scale(SPACING[4] + 2),
+                }}>
+                <Image
+                  source={
+                    users.find(user => user.id === post.userId)?.profileImage
+                  }
+                  style={styles.picture}
+                />
+                <Text style={{}}>
+                  {users.find(user => user.id === post.userId)?.username}
+                </Text>
+              </View>
+              <Icon name="dots-02" size={15} />
             </View>
 
-            <Image source={post.picture} style={{width: '100%'}} />
+            <Image
+              source={post.picture}
+              style={{width: '100%', height: scale(400)}}
+              resizeMethod="resize"
+            />
 
             <View style={{margin: scale(SPACING[10])}}>
               <View style={styles.interactionsFatherContainer}>
                 <View style={styles.interactionsContainer}>
                   <Image
                     source={require('../../assets/icons/like.png')}
-                    style={{width: 22, height: 18}}
+                    style={{width: 19, height: 16}}
                   />
                   <Image
                     source={require('../../assets/icons/comment.png')}
-                    style={{width: 22, height: 20}}
+                    style={{width: 19, height: 18}}
                   />
                   <Image
                     source={require('../../assets/icons/share.png')}
-                    style={{width: 22, height: 18}}
+                    style={{width: 19, height: 16}}
                   />
                 </View>
                 <View>
                   <Image
                     source={require('../../assets/icons/save.png')}
-                    style={{width: 22, height: 22}}
+                    style={{width: 19, height: 19}}
                   />
                 </View>
               </View>
