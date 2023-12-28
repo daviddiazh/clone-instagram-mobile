@@ -43,7 +43,8 @@ export const feed = [
     picture: require('../assets/images/posts/pirlo1.jpeg'),
     likes: '1.220 Me gusta',
     comments: 117,
-    description: '',
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 2 minutos',
   },
   {
@@ -52,7 +53,8 @@ export const feed = [
     picture: require('../assets/images/posts/cristiano1.jpeg'),
     likes: '5.822 Me gusta',
     comments: 2000,
-    description: '',
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 7 minutos',
   },
   {
@@ -61,7 +63,8 @@ export const feed = [
     picture: require('../assets/images/posts/ronaldinho1.jpeg'),
     likes: '12.330 Me gusta',
     comments: 455,
-    description: '',
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 9 minutos',
   },
   {
@@ -70,7 +73,8 @@ export const feed = [
     picture: require('../assets/images/posts/messi1.jpeg'),
     likes: '21.700 Me gusta',
     comments: 1000,
-    description: '',
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 14 minutos',
   },
   {
@@ -79,7 +83,8 @@ export const feed = [
     picture: require('../assets/images/posts/pirlo2.jpeg'),
     likes: '24.000 Me gusta',
     comments: 1500,
-    description: '',
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 15 minutos',
   },
 ];

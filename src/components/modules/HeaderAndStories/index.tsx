@@ -12,29 +12,33 @@ export const HeaderAndStories = () => {
   const dmIcon = '../../../assets/icons/dm.png';
 
   return (
-    <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <View style={styles.logoContainer}>
-          <Image
-            source={require(InstagramLogoLetters)}
-            style={{width: 150, height: 50}}
-          />
-          <Icon name="chevron-down" size={18} />
-        </View>
+    <>
+      <View style={styles.container}>
+        <View style={styles.headerContainer}>
+          <View style={styles.logoContainer}>
+            <Image
+              source={require(InstagramLogoLetters)}
+              style={{width: 150, height: 50}}
+            />
+            <Icon name="chevron-down" size={18} />
+          </View>
 
-        <View style={{...styles.logoContainer, gap: scale(10)}}>
-          <Icon name="heart-04" />
-          <View>
-            <View style={styles.dmContainer}>
-              <Image source={require(dmIcon)} style={{width: 32, height: 32}} />
-              <View style={styles.dmContainerText}>
-                <Text style={styles.dmText}>13</Text>
+          <View style={{...styles.logoContainer, gap: scale(10)}}>
+            <Icon name="heart-04" />
+            <View>
+              <View style={styles.dmContainer}>
+                <Image
+                  source={require(dmIcon)}
+                  style={{width: 32, height: 32}}
+                />
+                <View style={styles.dmContainerText}>
+                  <Text style={styles.dmText}>13</Text>
+                </View>
               </View>
             </View>
           </View>
         </View>
       </View>
-
       <FlatList
         horizontal
         keyExtractor={(_, index) => `story_${index}`}
@@ -53,6 +57,6 @@ export const HeaderAndStories = () => {
           <View style={{width: scale(SPACING[8])}} />
         )}
       />
-    </View>
+    </>
   );
 };

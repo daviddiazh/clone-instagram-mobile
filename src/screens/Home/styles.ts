@@ -25,4 +25,37 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
+  interactionsFatherContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  interactionsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: scale(SPACING[12] + 2),
+  },
+  likesText: {
+    fontSize: scale(SPACING[10] + 1),
+    fontWeight: '600',
+    paddingVertical: scale(SPACING[8]),
+  },
+  commentsText: {
+    fontSize: scale(SPACING[10] + 1),
+    fontWeight: '400',
+    color: '#666',
+    paddingVertical: scale(SPACING[4] + 1),
+  },
+  commentsBoxContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: scale(SPACING[4] + 2),
+    paddingVertical: scale(SPACING[4] + 2),
+  },
+  profilePictureSmall: {
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+  },
 });

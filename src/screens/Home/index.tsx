@@ -37,6 +37,64 @@ export const Home = () => {
             </View>
 
             <Image source={post.picture} style={{width: '100%'}} />
+
+            <View style={{margin: scale(SPACING[10])}}>
+              <View style={styles.interactionsFatherContainer}>
+                <View style={styles.interactionsContainer}>
+                  <Image
+                    source={require('../../assets/icons/like.png')}
+                    style={{width: 22, height: 18}}
+                  />
+                  <Image
+                    source={require('../../assets/icons/comment.png')}
+                    style={{width: 22, height: 20}}
+                  />
+                  <Image
+                    source={require('../../assets/icons/share.png')}
+                    style={{width: 22, height: 18}}
+                  />
+                </View>
+                <View>
+                  <Image
+                    source={require('../../assets/icons/save.png')}
+                    style={{width: 22, height: 22}}
+                  />
+                </View>
+              </View>
+
+              <Text style={styles.likesText}>{post.likes}</Text>
+              <Text style={{...styles.likesText, paddingVertical: 0}}>
+                {users.find(user => user.id === post.userId)?.username}{' '}
+                <Text style={{fontWeight: '400'}}>{post.description}</Text>
+              </Text>
+
+              <Text
+                style={
+                  styles.commentsText
+                }>{`Ver los ${post.comments} comentarios`}</Text>
+
+              <View style={styles.commentsBoxContainer}>
+                <Image
+                  source={users[0].profileImage}
+                  style={styles.profilePictureSmall}
+                />
+                <Text
+                  style={{
+                    ...styles.commentsText,
+                    fontSize: scale(SPACING[10] + 1.5),
+                  }}>
+                  Agrega un comentario...
+                </Text>
+              </View>
+
+              <Text
+                style={{
+                  ...styles.commentsText,
+                  fontSize: scale(SPACING[10] + 1),
+                }}>
+                {post.ago}
+              </Text>
+            </View>
           </View>
         )}
         style={{marginTop: 0}}

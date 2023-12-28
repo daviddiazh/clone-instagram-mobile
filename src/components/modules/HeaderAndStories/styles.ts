@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
     marginTop: scale(0),
     flexDirection: 'row',
     gap: scale(SPACING[8]),
+    marginLeft: scale(SPACING[4]),
   },
   usernameText: {
     fontSize: scale(SPACING[10] + 1),
