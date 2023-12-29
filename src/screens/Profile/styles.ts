@@ -91,4 +91,22 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
+
+  // -> Me Screen <-
+  withoutPostsContainer: {
+    width: '100%',
+    height: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
+    marginTop: '35%',
+  },
+  withoutPostLabel: {
+    fontSize: scale(SPACING[12] + 3),
+    color: COLORS.dark,
+    fontWeight: '700',
+    textAlign: 'center',
+    paddingTop: scale(SPACING[8]),
+  },
 });

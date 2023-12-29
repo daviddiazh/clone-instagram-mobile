@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
   FlatList,
@@ -23,13 +24,23 @@ export const Me = () => {
       showsHorizontalScrollIndicator={false}>
       <View style={styles.container}>
         <View style={styles.headerContainer}>
-          <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: scale(SPACING[2]),
+            }}>
             <Text style={styles.usernameTextHeader}>{me.username}</Text>
-            <Icon name="chevron-down" />
+            <Icon name="chevron-down" size={15} />
           </View>
-          <View>
-            <Icon name="plus-03" />
-            <Icon name="menu" />
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              gap: scale(SPACING[12] + 3),
+            }}>
+            <Icon name="plus-03" size={18} />
+            <Icon name="menu" size={18} />
           </View>
         </View>
 
@@ -98,23 +109,41 @@ export const Me = () => {
         </View>
       </View>
 
-      <FlatList
-        keyExtractor={(_, index) => `feed_${index}`}
-        data={feed.filter(post => post.userId === me.id)}
-        showsHorizontalScrollIndicator={false}
-        numColumns={3}
-        renderItem={({item, index}) => (
-          <View key={index} style={{width: '33%', height: 140}}>
-            <Image
-              source={item.picture}
-              style={{width: '100%', height: 140}}
-              resizeMethod="resize"
-            />
+      <View style={{borderTopColor: '#D2D4D5', borderTopWidth: 0.5}} />
+
+      {feed.filter(post => post.userId === me.id).length > 0 ? (
+        <FlatList
+          keyExtractor={(_, index) => `feed_${index}`}
+          data={feed.filter(post => post.userId === me.id)}
+          showsHorizontalScrollIndicator={false}
+          numColumns={3}
+          renderItem={({item, index}) => (
+            <View key={index} style={{width: '33%', height: 140}}>
+              <Image
+                source={item.picture}
+                style={{width: '100%', height: '100%'}}
+                resizeMethod="resize"
+              />
+            </View>
+          )}
+          contentContainerStyle={{gap: scale(SPACING[2])}}
+          columnWrapperStyle={{gap: scale(SPACING[2])}}
+        />
+      ) : (
+        <View style={styles.withoutPostsContainer}>
+          <View>
+            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+              <Image
+                source={require('../../assets/icons/without-posts.png')}
+                style={{width: 70, height: 70}}
+              />
+            </View>
+            <Text style={styles.withoutPostLabel}>
+              Aún no hay publicaciones
+            </Text>
           </View>
-        )}
-        contentContainerStyle={{gap: scale(SPACING[2])}}
-        columnWrapperStyle={{gap: scale(SPACING[2])}}
-      />
+        </View>
+      )}
     </ScrollView>
   );
 };
