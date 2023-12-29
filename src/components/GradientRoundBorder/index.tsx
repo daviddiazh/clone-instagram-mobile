@@ -6,7 +6,7 @@ export const GradientRoundBorder = ({children}: any) => {
   return (
     <View style={styles.container}>
       <LinearGradient
-        colors={['#feda75', '#fa7e1e', '#d62976', '#962fbf']} // Cambia estos colores según tu gradiente
+        colors={['#feda75', '#fa7e1e', '#d62976', '#962fbf']}
         style={styles.gradient}
         start={{x: 0, y: 0}} // Punto de inicio del gradiente
         end={{x: 1, y: 0}} // Punto de fin del gradiente
@@ -24,13 +24,13 @@ const styles = StyleSheet.create({
     height: 80,
   },
   gradient: {
-    borderRadius: 100, // Ajusta este valor para cambiar la redondez del borde
+    borderRadius: 100,
     padding: 2,
     width: 80,
     height: 80,
   },
   innerContainer: {
-    borderRadius: 100, // <-- Inner Border Radius
+    borderRadius: 100,
     flex: 1,
     padding: 3, // <-- Border Width
     backgroundColor: '#fff',
