@@ -18,9 +18,9 @@ export const HeaderAndStories = () => {
           <View style={styles.logoContainer}>
             <Image
               source={require(InstagramLogoLetters)}
-              style={{width: 150, height: 50}}
+              style={{width: 120, height: 35}}
             />
-            <Icon name="chevron-down" size={18} />
+            <Icon name="chevron-down" size={15} />
           </View>
 
           <View style={{...styles.logoContainer, gap: scale(10)}}>

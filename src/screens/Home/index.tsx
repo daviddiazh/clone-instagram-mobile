@@ -152,7 +152,7 @@ export const Home = () => {
                 <View>
                   <Image
                     source={require('../../assets/icons/save.png')}
-                    style={{width: 19, height: 19}}
+                    style={{width: 19, height: 20}}
                   />
                 </View>
               </View>

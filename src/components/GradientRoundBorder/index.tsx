@@ -21,13 +21,13 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 90,
+    height: 80,
   },
   gradient: {
     borderRadius: 100, // Ajusta este valor para cambiar la redondez del borde
     padding: 2,
-    width: 90,
-    height: 90,
+    width: 80,
+    height: 80,
   },
   innerContainer: {
     borderRadius: 100, // <-- Inner Border Radius

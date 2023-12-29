@@ -14,8 +14,8 @@ export const renderStoryMapper = (item: any) => {
         style={{
           borderRadius: 100,
           padding: 2,
-          width: 90,
-          height: 90,
+          width: 80,
+          height: 80,
           backgroundColor: COLORS.success.default,
         }}>
         <View
@@ -28,7 +28,7 @@ export const renderStoryMapper = (item: any) => {
           }}>
           <Image
             source={item.profileImage}
-            style={{width: 80, height: 80, borderRadius: 100}}
+            style={{width: 70, height: 70, borderRadius: 100}}
           />
         </View>
       </View>
@@ -39,8 +39,8 @@ export const renderStoryMapper = (item: any) => {
         style={{
           borderRadius: 100,
           padding: 2,
-          width: 90,
-          height: 90,
+          width: 80,
+          height: 80,
           backgroundColor: '#cecece',
         }}>
         <View
@@ -53,7 +53,7 @@ export const renderStoryMapper = (item: any) => {
           }}>
           <Image
             source={item.profileImage}
-            style={{width: 80, height: 80, borderRadius: 100}}
+            style={{width: 70, height: 70, borderRadius: 100}}
           />
         </View>
       </View>
@@ -63,7 +63,7 @@ export const renderStoryMapper = (item: any) => {
       <View style={{...styles.dmContainer, marginVertical: scale(0)}}>
         <Image
           source={item.profileImage}
-          style={{width: 86, height: 86, borderRadius: 100}}
+          style={{width: 76, height: 76, borderRadius: 100}}
         />
         <View
           style={{
@@ -91,7 +91,7 @@ export const renderStoryMapper = (item: any) => {
     <GradientRoundBorder>
       <Image
         source={item.profileImage}
-        style={{width: 80, height: 80, borderRadius: 100}}
+        style={{width: 70, height: 70, borderRadius: 100}}
       />
     </GradientRoundBorder>
   );

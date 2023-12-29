@@ -4,7 +4,8 @@ import {COLORS, SPACING} from '../../../theme';
 
 export const styles = StyleSheet.create({
   container: {
-    margin: scale(SPACING[4]),
+    marginHorizontal: scale(SPACING[4]),
+    marginVertical: scale(SPACING[2]),
     padding: 0,
   },
   headerContainer: {
@@ -16,7 +17,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    gap: scale(SPACING[4]),
+    gap: scale(SPACING[2]),
   },
   dmContainer: {
     flex: 1,
