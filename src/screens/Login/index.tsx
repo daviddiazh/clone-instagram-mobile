@@ -2,11 +2,11 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {scale} from 'react-native-size-matters';
+import {useNavigation} from '@react-navigation/native';
 import {Icon} from '../../components/Icon';
 import {users} from '../../api';
-import {useNavigation} from '@react-navigation/native';
 import {styles} from './styles';
-import {scale} from 'react-native-size-matters';
 import {SPACING} from '../../theme';
 
 export const Login = () => {

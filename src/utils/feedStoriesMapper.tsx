@@ -1,5 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
-import {Image, Text, View} from 'react-native';
+import {Image, View} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import {COLORS, SPACING} from '../theme';
 import {styles} from '../components/modules/HeaderAndStories/styles';

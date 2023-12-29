@@ -8,11 +8,11 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import {scale} from 'react-native-size-matters';
 import {feed, users} from '../../api';
 import {styles} from '../Profile/styles';
 import {Icon} from '../../components/Icon';
 import {renderStoryMapper} from '../../utils/feedStoriesMapper';
-import {scale} from 'react-native-size-matters';
 import {SPACING} from '../../theme';
 
 export const Me = () => {
