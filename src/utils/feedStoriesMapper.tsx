@@ -73,7 +73,7 @@ export const renderStoryMapper = (item: any) => {
             paddingHorizontal: scale(SPACING[2] + 1),
             borderRadius: scale(100),
             bottom: scale(2),
-            right: -scale(-5),
+            right: scale(0),
           }}>
           <View
             style={{

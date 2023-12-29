@@ -62,13 +62,13 @@ export const styles = StyleSheet.create({
   bigButton: {
     width: '45%',
     backgroundColor: '#efefef',
-    paddingVertical: scale(SPACING[2] + 1),
+    paddingVertical: scale(SPACING[2] + 2),
     borderRadius: scale(SPACING[4]),
   },
   smallButton: {
     width: '6.5%',
     backgroundColor: '#efefef',
-    paddingVertical: scale(SPACING[2] + 3.5),
+    paddingVertical: scale(SPACING[2] + 4.5),
     borderRadius: scale(SPACING[4]),
     flexDirection: 'row',
     justifyContent: 'center',
@@ -78,5 +78,17 @@ export const styles = StyleSheet.create({
     color: COLORS.dark,
     fontWeight: '600',
     textAlign: 'center',
+  },
+  containerIconsPosts: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    paddingTop: scale(SPACING[12] + 2),
+    paddingBottom: scale(SPACING[4]),
+  },
+  containerIconPosts: {
+    width: '50%',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

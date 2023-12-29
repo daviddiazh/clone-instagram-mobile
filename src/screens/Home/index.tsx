@@ -27,6 +27,8 @@ export const Home = () => {
     false,
     false,
     false,
+    false,
+    false,
   ]);
   const [lastPress, setLastPress] = useState<any>(null);
 

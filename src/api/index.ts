@@ -142,4 +142,24 @@ export const feed = [
       'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
     ago: 'Hace 55 minutos',
   },
+  {
+    id: 8,
+    userId: 3,
+    picture: require('../assets/images/posts/messi3.jpeg'),
+    likes: '78.240 Me gusta',
+    comments: 9573,
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    ago: 'Hace 1 hora',
+  },
+  {
+    id: 9,
+    userId: 3,
+    picture: require('../assets/images/posts/messi4.jpeg'),
+    likes: '99.937 Me gusta',
+    comments: 13847,
+    description:
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.',
+    ago: 'Hace 1 hora',
+  },
 ];
