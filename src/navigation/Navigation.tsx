@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import {createStackNavigator} from '@react-navigation/stack';
 import {BottomTabNavigation} from './BottomTab';
+import {Profile} from '../screens/Profile';
 
 const NavigationStack = createStackNavigator();
 
@@ -23,6 +24,7 @@ export const Navigation = () => {
         name="BottomTabNavigation"
         component={BottomTabNavigation}
       />
+      <NavigationStack.Screen name="Profile" component={Profile} />
     </NavigationStack.Navigator>
   );
 };

@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {scale} from 'react-native-size-matters';
+import {useNavigation} from '@react-navigation/native';
 import {HeaderAndStories} from '../../components/modules/HeaderAndStories';
 import {feed, users} from '../../api';
 import {SPACING} from '../../theme';
@@ -29,6 +30,8 @@ export const Home = () => {
   ]);
   const [lastPress, setLastPress] = useState<any>(null);
 
+  const navigation = useNavigation();
+
   const changeLike = (index: number) => {
     setLikes((prevLikes: boolean[]) => {
       const newLikes = [...prevLikes];
@@ -47,6 +50,13 @@ export const Home = () => {
     }
 
     setLastPress(new Date().getTime());
+  };
+
+  const goToProfile = (userInfo: any) => {
+    // @ts-ignore
+    navigation.navigate('Profile', {
+      userInfo,
+    });
   };
 
   return (
@@ -86,7 +96,10 @@ export const Home = () => {
                     ...styles.likesText,
                     paddingVertical: 0,
                     fontSize: scale(SPACING[12]),
-                  }}>
+                  }}
+                  onPress={() =>
+                    goToProfile(users.find(user => user.id === post.userId))
+                  }>
                   {users.find(user => user.id === post.userId)?.username}
                 </Text>
               </View>

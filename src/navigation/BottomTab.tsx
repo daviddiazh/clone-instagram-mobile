@@ -6,6 +6,8 @@ import {scale} from 'react-native-size-matters';
 import {COLORS, SPACING} from '../theme';
 import {Icon} from '../components/Icon';
 import {Home} from '../screens/Home';
+import {Profile} from '../screens/Profile';
+import { Me } from '../screens/Me';
 
 const NavigationTab = createBottomTabNavigator();
 
@@ -73,14 +75,14 @@ export const BottomTabNavigation: React.FC = () => {
         component={() => <></>}
       />
       <NavigationTab.Screen
-        name="Profile"
+        name="Me"
         options={{
           tabBarLabel: '',
           tabBarIcon: (tabBarProps: any) => (
             <IconTabBar {...tabBarProps} iconName="user-circle" />
           ),
         }}
-        component={() => <></>}
+        component={Me}
       />
     </NavigationTab.Navigator>
   );
