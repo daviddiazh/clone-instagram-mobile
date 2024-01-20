@@ -73,13 +73,13 @@ export const Me = () => {
         <View style={styles.buttonsContainer}>
           <TouchableOpacity activeOpacity={0.8} style={styles.bigButton}>
             <View>
-              <Text style={styles.textButton}>Siguiendo</Text>
+              <Text style={styles.textButton}>Editar</Text>
             </View>
           </TouchableOpacity>
 
           <TouchableOpacity activeOpacity={0.8} style={styles.bigButton}>
             <View>
-              <Text style={styles.textButton}>Mensaje</Text>
+              <Text style={styles.textButton}>Compartir perfil</Text>
             </View>
           </TouchableOpacity>
 
